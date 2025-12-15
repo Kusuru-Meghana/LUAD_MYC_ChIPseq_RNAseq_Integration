@@ -48,7 +48,7 @@ The genes directly regulated by MYC are strongly enriched for processes related 
 
 - RNA metabolism and quality control
 
-This supports the idea that MYC directly drives the protein-production machinery needed for rapid cancer cell growth. The enrichment plots and integration visualizations are shown in the figures/ folder.
+This supports the idea that MYC directly drives the protein-production machinery needed for rapid cancer cell growth. The enrichment plots and integration visualizations are shown in the ```figures/``` folder.
 
 ## Repository layout
 ```
@@ -57,3 +57,24 @@ scripts/   Integration and enrichment analysis code
 results/   Final list of direct MYC target genes
 figures/   Enrichment plots and visual summaries
 ```
+
+
+## How to reproduce
+
+Run the scripts in order:
+
+```01_overlap_chip_rna.R``` - identifies MYC-bound DEGs
+
+```02_enrichment_overlap.R``` - performs GO, KEGG, and Reactome enrichment
+
+
+## Summary
+
+By integrating MYC binding with transcriptional response, this project narrows thousands of MYC binding events down to a biologically meaningful set of direct MYC targets in lung adenocarcinoma. These targets are heavily involved in translation and ribosome biology, highlighting MYC’s role as a driver of cellular growth programs in cancer.
+
+
+## Author
+
+Meghana Kusuru
+Bioinformatics & Computational Biology
+University of Delaware
