@@ -24,3 +24,36 @@ RNA-seq differential expression analysis (siMYC vs control):
 https://github.com/Kusuru-Meghana/LUAD_MYC_RNAseq
 
 For this repository, I only use the processed, gene-level outputs from those analyses.
+
+
+## How the integration works
+
+- MYC ChIP-seq peaks were annotated to nearby genes to define a set of MYC-bound genes.
+
+- RNA-seq was used to identify genes whose expression changes after MYC knockdown.
+
+- Gene identifiers were matched and intersected to find genes that are both MYC-bound and differentially expressed.
+
+- This overlapping gene set was analyzed using GO, KEGG, and Reactome pathway enrichment.
+
+## Results
+
+The genes directly regulated by MYC are strongly enriched for processes related to:
+
+- Ribosome biogenesis
+
+- rRNA processing
+
+- Translation initiation and elongation
+
+- RNA metabolism and quality control
+
+This supports the idea that MYC directly drives the protein-production machinery needed for rapid cancer cell growth. The enrichment plots and integration visualizations are shown in the figures/ folder.
+
+## Repository layout
+```
+data/      Processed input data (ChIP annotations, RNA-seq DEGs)
+scripts/   Integration and enrichment analysis code
+results/   Final list of direct MYC target genes
+figures/   Enrichment plots and visual summaries
+```
